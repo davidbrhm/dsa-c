@@ -8,4 +8,6 @@ add_executable(dsa-c src/main.c
         src/data_structures/stack.c
         include/stack.h
         src/leetcode/020_valid_parentheses/solution.c
+        src/leetcode/1952_three_divisors/solution.c
+        src/leetcode/169_majority_element/solution.c
 )
