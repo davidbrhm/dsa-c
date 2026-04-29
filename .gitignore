@@ -53,3 +53,12 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+# CLion
+.idea/
+cmake-build-*/
+*.i
+*.s
+
+.DS_Store
+Thumbs.db
