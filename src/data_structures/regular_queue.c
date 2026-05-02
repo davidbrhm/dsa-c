@@ -1,0 +1,88 @@
+//
+// Created by Ábrahám Dávid on 2026. 05. 02..
+//
+
+#include "../../include/regular_queue.h"
+#include "../../include/constants.h"
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+const char QUEUE_FULL_ERROR_MESSAGE[] = "Error: the queue is full!";
+const char QUEUE_EMPTY_ERROR_MESSAGE[] = "Error: the queue is empty!";
+
+
+void create_queue(int capacity, Queue *queue) {
+    queue->capacity = capacity;
+    queue->front = queue->rear = -1;
+
+    queue->elements = (int *) calloc(capacity, sizeof(int));
+
+    if (!queue->elements) {
+        printf("%s", MEMORY_ALLOCATION_ERROR_MESSAGE);
+        exit(MEMORY_ALLOCATION_ERROR_CODE);
+    }
+}
+
+
+void destroy_queue(Queue *queue) {
+    queue->capacity = 0;
+    queue->front = queue->rear = -1;
+    free(queue->elements);
+    queue = NULL;
+}
+
+
+void display_queue(const Queue *queue) {
+    if (queue_is_empty(queue)) return;
+
+    for (int i = queue->front; i <= queue->rear; i++) {
+        printf("%i ", queue->elements[i]);
+    }
+
+    printf("\n");
+}
+
+
+bool queue_is_full(const Queue *queue) {
+    return queue->rear == queue->capacity - 1;
+}
+
+
+bool queue_is_empty(const Queue *queue) {
+    return queue->rear == -1 && queue->front == -1;
+}
+
+
+void queue_enqueue(Queue *queue, int element) {
+    if (queue_is_full(queue)) {
+        printf("%s", QUEUE_FULL_ERROR_MESSAGE);
+        return;
+    }
+
+    if (queue_is_empty(queue)) {
+        queue->front = queue->rear = 0;
+    } else {
+        queue->rear++;
+    }
+
+    queue->elements[queue->rear] = element;
+}
+
+
+int queue_dequeue(Queue *queue) {
+    if (queue_is_empty(queue)) {
+        printf("%s", QUEUE_EMPTY_ERROR_MESSAGE);
+        return -1; // ?
+    }
+
+    if (queue->front == queue->rear) {
+        int pos = queue->front;
+        queue->front = queue->rear = -1;
+
+        return queue->elements[pos];
+    }
+
+    return queue->elements[queue->front++];
+}

@@ -86,7 +86,7 @@ void print_array(int n, int *p_arr, const char *output) {
     }
 }
 
-void destroy_array(int **dp_arr) {
+void deallocate_memory_for_array(int **dp_arr) {
     free(*dp_arr);
     *dp_arr = NULL;
 }

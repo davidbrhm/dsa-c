@@ -18,4 +18,6 @@ add_executable(dsa-c src/main.c
         src/_utils/constants.c
         src/data_structures/array.c
         include/array.h
+        src/data_structures/regular_queue.c
+        include/regular_queue.h
 )

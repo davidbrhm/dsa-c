@@ -1,23 +1,22 @@
 #include <stdio.h>
 
-#include "../include/matrix.h"
 #include "../include/constants.h"
+#include "../include/regular_queue.h"
 
 int main(void) {
-    /*
-    int n, *pArray;
-    read_array(&n, &pArray, "be.txt");
-    print_array(n, pArray, "CON");
-    destroy_array(&pArray);
-    */
+    Queue queue;
 
-    // matrix
-    int rows = 3, cols = 5, **pMatrix;
-    //pMatrix = allocate_memory_for_matrix1(rows, cols);
-    //allocate_memory_for_matrix2(rows, cols, &pMatrix);
-    read_matrix(&rows, &cols, &pMatrix, "./matrix.txt");
+    create_queue(5, &queue);
 
-    print_matrix(rows, cols, pMatrix, "CON");
-    destroy_matrix(rows, &pMatrix);
+    queue_enqueue(&queue, 10);
+    queue_enqueue(&queue, 15);
+    display_queue(&queue);
+    queue_enqueue(&queue, 20);
+    display_queue(&queue);
+    queue_dequeue(&queue);
+    display_queue(&queue);
+
+
+    destroy_queue(&queue);
     return 0;
 }
