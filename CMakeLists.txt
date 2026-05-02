@@ -16,4 +16,6 @@ add_executable(dsa-c src/main.c
         src/data_structures/matrix.c
         include/matrix.h
         src/_utils/constants.c
+        src/data_structures/array.c
+        include/array.h
 )
