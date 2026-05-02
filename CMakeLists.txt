@@ -13,4 +13,7 @@ add_executable(dsa-c src/main.c
         src/leetcode/067_add_binary/solution.c
         src/leetcode/217_contains_duplicate/solution.c
         src/leetcode/682_baseball_game/solution.c
+        src/data_structures/matrix.c
+        include/matrix.h
+        src/_utils/constants.c
 )
