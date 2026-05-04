@@ -3,6 +3,9 @@
 //
 
 #include "../../include/regular_queue.h"
+
+#include <limits.h>
+
 #include "../../include/constants.h"
 
 #include <stdio.h>
@@ -51,7 +54,7 @@ bool queue_is_full(const Queue *queue) {
 
 
 bool queue_is_empty(const Queue *queue) {
-    return queue->rear == -1 && queue->front == -1;
+    return queue->front == -1;
 }
 
 
@@ -74,7 +77,7 @@ void queue_enqueue(Queue *queue, int element) {
 int queue_dequeue(Queue *queue) {
     if (queue_is_empty(queue)) {
         printf("%s", QUEUE_EMPTY_ERROR_MESSAGE);
-        return -1; // ?
+        return INT_MIN;
     }
 
     if (queue->front == queue->rear) {

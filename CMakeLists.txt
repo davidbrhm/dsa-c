@@ -20,4 +20,7 @@ add_executable(dsa-c src/main.c
         include/array.h
         src/data_structures/regular_queue.c
         include/regular_queue.h
+        src/leetcode/1700_number_of_students_unable_to_eat_lunch/solution.c
+        src/data_structures/circular_queue.c
+        include/circular_queue.h
 )
