@@ -24,4 +24,6 @@ add_executable(dsa-c src/main.c
         src/data_structures/circular_queue.c
         include/circular_queue.h
         src/leetcode/622_design_circular_queue/solution.c
+        src/data_structures/singly_linked_list.c
+        include/singly_linked_list.h
 )

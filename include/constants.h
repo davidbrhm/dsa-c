@@ -8,9 +8,11 @@
 #define ERR_CODE_MEM_ALLOC 10
 #define ERR_CODE_FILE_OPEN 11
 #define ERR_CODE_NULL_PTR  12
+#define ERR_CODE_NULL_PTR 12
 
 extern const char ERR_MSG_MEM_ALLOC[];
 extern const char ERR_MSG_FILE_OPEN[];
+extern const char ERR_MSG_NULL_PTR[];
 
 extern const char ERR_MSG_DS_FULL[];
 extern const char ERR_MSG_DS_EMPTY[];
