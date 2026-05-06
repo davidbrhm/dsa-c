@@ -9,8 +9,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-const char CQUEUE_FULL_ERROR_MESSAGE[] = "Error: the queue is full!";
-const char CQUEUE_EMPTY_ERROR_MESSAGE[] = "Error: the queue is empty!";
 
 void create_cqueue(int capacity, CircularQueue *cqueue) {
     cqueue->capacity = capacity;
@@ -19,8 +17,8 @@ void create_cqueue(int capacity, CircularQueue *cqueue) {
     cqueue->elements = (int *) calloc(capacity, sizeof(int));
 
     if (!cqueue->elements) {
-        printf("%s", MEMORY_ALLOCATION_ERROR_MESSAGE);
-        exit(MEMORY_ALLOCATION_ERROR_CODE);
+        printf("%s", ERR_MSG_MEM_ALLOC);
+        exit(ERR_CODE_MEM_ALLOC);
     }
 }
 
@@ -42,7 +40,7 @@ bool cqueue_is_empty(const CircularQueue *cqueue) {
 
 void cqueue_enqueue(CircularQueue *cqueue, int element) {
     if (cqueue_is_full(cqueue)) {
-        printf("%s", CQUEUE_FULL_ERROR_MESSAGE);
+        printf("%s", ERR_MSG_DS_FULL);
         return;
     }
     if (cqueue_is_empty(cqueue))
@@ -54,7 +52,7 @@ void cqueue_enqueue(CircularQueue *cqueue, int element) {
 
 int cqueue_dequeue(CircularQueue *cqueue) {
     if (cqueue_is_empty(cqueue)) {
-        printf("%s", CQUEUE_EMPTY_ERROR_MESSAGE);
+        printf("%s", ERR_MSG_DS_EMPTY);
         return INT_MIN;
     }
 
@@ -70,7 +68,7 @@ int cqueue_dequeue(CircularQueue *cqueue) {
 
 void display_cqueue(const CircularQueue *cqueue) {
     if (cqueue_is_empty(cqueue)) {
-        printf("%s", CQUEUE_EMPTY_ERROR_MESSAGE);
+        printf("%s", ERR_MSG_DS_EMPTY);
         return;
     }
 
@@ -84,7 +82,7 @@ void display_cqueue(const CircularQueue *cqueue) {
 
 void display_cqueue2(const CircularQueue *cqueue) {
     if (cqueue_is_empty(cqueue)) {
-        printf("%s\n", CQUEUE_EMPTY_ERROR_MESSAGE);
+        printf("%s\n", ERR_MSG_DS_EMPTY);
         return;
     }
 

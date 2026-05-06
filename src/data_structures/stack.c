@@ -16,7 +16,7 @@ void create_stack(int capacity, Stack *stack) {
     // stack->elements = malloc(stack->capacity * sizeof(int));
 
     if (!stack->elements) {
-        printf("%s", MEMORY_ALLOCATION_ERROR_MESSAGE);
+        printf("%s", ERR_MSG_MEM_ALLOC);
     }
 }
 

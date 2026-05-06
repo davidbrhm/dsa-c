@@ -4,8 +4,10 @@
 
 #include "../../include/constants.h"
 
-const char MEMORY_ALLOCATION_ERROR_MESSAGE[] = "MEMORY_ALLOCATION_ERROR";
-const int MEMORY_ALLOCATION_ERROR_CODE = -1;
+const char ERR_MSG_MEM_ALLOC[] = "MEMORY_ALLOCATION_ERROR";
 
-const char FILE_OPENING_ERROR_MESSAGE[] = "FILE_OPEN_ERROR_MESSAGE";
-const int FILE_OPENING_ERROR_CODE = -2;
+const char ERR_MSG_FILE_OPEN[] = "FILE_OPEN_ERROR_MESSAGE";
+
+const char ERR_MSG_DS_FULL[] = "Error: Structure is full.\n";
+const char ERR_MSG_DS_EMPTY[] = "Error: Structure is empty.\n";
+const char ERR_MSG_OUT_OF_BOUNDS[] = "Error: Index out of bounds.\n";

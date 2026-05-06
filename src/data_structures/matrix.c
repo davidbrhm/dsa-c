@@ -16,8 +16,8 @@ int *allocate_memory_for_array1(int n) {
     int *pArray = malloc(n * sizeof(int));
 
     if (!pArray) {
-        printf("%s", MEMORY_ALLOCATION_ERROR_MESSAGE);
-        exit(MEMORY_ALLOCATION_ERROR_CODE);
+        printf("%s", ERR_MSG_MEM_ALLOC);
+        exit(ERR_CODE_MEM_ALLOC);
     }
 
     return pArray;
@@ -28,8 +28,8 @@ void allocate_memory_for_array2(int n, int **dp_arr) {
     *dp_arr = malloc(n * sizeof(int));
 
     if (!*dp_arr) {
-        printf("%s", MEMORY_ALLOCATION_ERROR_MESSAGE);
-        exit(MEMORY_ALLOCATION_ERROR_CODE);
+        printf("%s", ERR_MSG_MEM_ALLOC);
+        exit(ERR_CODE_MEM_ALLOC);
     }
 }
 
@@ -42,8 +42,8 @@ void read_array(int *pn, int **dp_arr, const char *input) {
         in = fopen(input, "r");
 
         if (!in) {
-            printf("%s", FILE_OPENING_ERROR_MESSAGE);
-            exit(FILE_OPENING_ERROR_CODE);
+            printf("%s", ERR_MSG_FILE_OPEN);
+            exit(ERR_CODE_FILE_OPEN);
         }
     }
 
@@ -94,16 +94,16 @@ void deallocate_memory_for_array(int **dp_arr) {
 int **allocate_memory_for_matrix1(int rows, int cols) {
     int **pMatrix = (int **) calloc(rows, sizeof(int *));
     if (!pMatrix) {
-        printf("%s", MEMORY_ALLOCATION_ERROR_MESSAGE);
-        exit(MEMORY_ALLOCATION_ERROR_CODE);
+        printf("%s", ERR_MSG_MEM_ALLOC);
+        exit(ERR_CODE_MEM_ALLOC);
     }
 
     for (int i = 0; i < rows; i++) {
         pMatrix[i] = (int *) calloc(cols, sizeof(int));
 
         if (!pMatrix[i]) {
-            printf("%s", MEMORY_ALLOCATION_ERROR_MESSAGE);
-            exit(MEMORY_ALLOCATION_ERROR_CODE);
+            printf("%s", ERR_MSG_MEM_ALLOC);
+            exit(ERR_CODE_MEM_ALLOC);
         }
     }
 
@@ -114,16 +114,16 @@ void allocate_memory_for_matrix2(int rows, int cols, int ***dp_matrix) {
     *dp_matrix = (int**) calloc(rows, sizeof(int*));
 
     if (!*dp_matrix) {
-        printf("%s", MEMORY_ALLOCATION_ERROR_MESSAGE);
-        exit(MEMORY_ALLOCATION_ERROR_CODE);
+        printf("%s", ERR_MSG_MEM_ALLOC);
+        exit(ERR_CODE_MEM_ALLOC);
     }
 
     for (int i = 0; i < rows; i++) {
         (*dp_matrix)[i] = (int *) calloc(cols, sizeof(int));
 
         if (!(*dp_matrix)[i]) {
-            printf("%s", MEMORY_ALLOCATION_ERROR_MESSAGE);
-            exit(MEMORY_ALLOCATION_ERROR_CODE);
+            printf("%s", ERR_MSG_MEM_ALLOC);
+            exit(ERR_CODE_MEM_ALLOC);
         }
     }
 }
@@ -168,8 +168,8 @@ void read_matrix(int *p_rows, int *p_cols, int ***dp_matrix, const char *input) 
     } else {
         in = fopen(input, "r");
         if (!in) {
-            printf("%s", FILE_OPENING_ERROR_MESSAGE);
-            exit(FILE_OPENING_ERROR_CODE);
+            printf("%s", ERR_MSG_FILE_OPEN);
+            exit(ERR_CODE_FILE_OPEN);
         }
     }
 

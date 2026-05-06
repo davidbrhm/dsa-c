@@ -9,17 +9,13 @@
 #include "../../include/constants.h"
 #include "../../include/array.h"
 
-const char ARRAY_FULL_ERROR_MESSAGE[] = "Error: the array is full!";
-const char ARRAY_EMPTY_ERROR_MESSAGE[] = "Error: the array is empty!";
-const char ARRAY_INDEXING_ERROR_MESSAGE[] = "Error: invalid index!";
-
 
 IntArray *create_array(int capacity) {
     IntArray *arr = malloc(sizeof(IntArray) + (capacity * sizeof(int)));
 
     if (!arr) {
-        printf("%s", MEMORY_ALLOCATION_ERROR_MESSAGE);
-        exit(MEMORY_ALLOCATION_ERROR_CODE);
+        printf("%s", ERR_MSG_MEM_ALLOC);
+        exit(ERR_CODE_MEM_ALLOC);
     }
 
     arr->capacity = capacity;
@@ -44,7 +40,7 @@ bool array_is_empty(IntArray *p_arr) {
 
 int array_at(IntArray *p_arr, int index) {
     if (index < 0 || index > p_arr->size) {
-        printf("%s", ARRAY_INDEXING_ERROR_MESSAGE);
+        printf("%s", ERR_MSG_OUT_OF_BOUNDS);
         exit(-1);
     }
 
@@ -53,7 +49,7 @@ int array_at(IntArray *p_arr, int index) {
 
 void array_insert_last(IntArray *p_arr, int element) {
     if (array_is_full(p_arr)) {
-        printf("%s", ARRAY_FULL_ERROR_MESSAGE);
+        printf("%s", ERR_MSG_DS_FULL);
         return;
     }
 
@@ -62,11 +58,11 @@ void array_insert_last(IntArray *p_arr, int element) {
 
 void array_insert_at(IntArray *p_arr, int index, int element) {
     if (array_is_full(p_arr)) {
-        printf("%s", ARRAY_FULL_ERROR_MESSAGE);
+        printf("%s", ERR_MSG_DS_FULL);
         return;
     }
     if (index < 0 || index >= p_arr->size) {
-        printf("%s", ARRAY_INDEXING_ERROR_MESSAGE);
+        printf("%s", ERR_MSG_OUT_OF_BOUNDS);
         return;
     }
 
@@ -88,11 +84,11 @@ void array_insert_first(IntArray *p_arr, int element) {
 
 void array_pop(IntArray *p_arr, int index) {
     if (array_is_empty(p_arr)) {
-        printf("%s", ARRAY_EMPTY_ERROR_MESSAGE);
+        printf("%s", ERR_MSG_DS_EMPTY);
         return;
     }
     if (index < 0 || index >= p_arr->size) {
-        printf("%s", ARRAY_INDEXING_ERROR_MESSAGE);
+        printf("%s", ERR_MSG_OUT_OF_BOUNDS);
         return;
     }
 
@@ -105,7 +101,7 @@ void array_pop(IntArray *p_arr, int index) {
 
 int array_search(IntArray *p_arr, int target) {
     if (array_is_empty(p_arr)) {
-        printf("%s", ARRAY_EMPTY_ERROR_MESSAGE);
+        printf("%s", ERR_MSG_DS_EMPTY);
         return -1;
     }
 
@@ -119,7 +115,7 @@ int array_search(IntArray *p_arr, int target) {
 
 bool array_update(IntArray *p_arr, int index, int element) {
     if (index < 0 || index >= p_arr->size) {
-        printf("%s", ARRAY_INDEXING_ERROR_MESSAGE);
+        printf("%s", ERR_MSG_OUT_OF_BOUNDS);
         return false;
     }
 

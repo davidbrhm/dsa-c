@@ -12,10 +12,6 @@
 #include <stdlib.h>
 
 
-const char QUEUE_FULL_ERROR_MESSAGE[] = "Error: the queue is full!";
-const char QUEUE_EMPTY_ERROR_MESSAGE[] = "Error: the queue is empty!";
-
-
 void create_queue(int capacity, Queue *queue) {
     queue->capacity = capacity;
     queue->front = queue->rear = -1;
@@ -23,8 +19,8 @@ void create_queue(int capacity, Queue *queue) {
     queue->elements = (int *) calloc(capacity, sizeof(int));
 
     if (!queue->elements) {
-        printf("%s", MEMORY_ALLOCATION_ERROR_MESSAGE);
-        exit(MEMORY_ALLOCATION_ERROR_CODE);
+        printf("%s", ERR_MSG_MEM_ALLOC);
+        exit(ERR_CODE_MEM_ALLOC);
     }
 }
 
@@ -60,7 +56,7 @@ bool queue_is_empty(const Queue *queue) {
 
 void queue_enqueue(Queue *queue, int element) {
     if (queue_is_full(queue)) {
-        printf("%s", QUEUE_FULL_ERROR_MESSAGE);
+        printf("%s", ERR_MSG_DS_FULL);
         return;
     }
 
@@ -76,7 +72,7 @@ void queue_enqueue(Queue *queue, int element) {
 
 int queue_dequeue(Queue *queue) {
     if (queue_is_empty(queue)) {
-        printf("%s", QUEUE_EMPTY_ERROR_MESSAGE);
+        printf("%s", ERR_MSG_DS_EMPTY);
         return INT_MIN;
     }
 
