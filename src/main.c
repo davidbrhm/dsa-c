@@ -1,21 +1,17 @@
-#include "../include/circular_queue.h"
+#include "../include/doubly_linked_list.h"
 
 int main(void) {
-    CircularQueue circular_queue;
+    DList *list = create_dlist();
 
-    create_cqueue(3, &circular_queue);
-    cqueue_enqueue(&circular_queue, 10);
-    cqueue_enqueue(&circular_queue, 15);
-    cqueue_enqueue(&circular_queue, 20);
-    display_cqueue(&circular_queue);
+    dlist_insert_last(list, 2);
+    dlist_insert_last(list, 4);
+    dlist_insert_last(list, 6);
 
+    display_dlist(list);
+    dlist_display_backward(list);
 
-    cqueue_dequeue(&circular_queue);
-    display_cqueue(&circular_queue);
-
-
-
-
-    destroy_cqueue(&circular_queue);
+    dlist_insert_first(list, 1);
+    dlist_insert_after(list, list->head->next, 3);
+    display_dlist(list);
     return 0;
 }
