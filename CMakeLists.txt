@@ -28,4 +28,5 @@ add_executable(dsa-c src/main.c
         include/singly_linked_list.h
         src/data_structures/doubly_linked_list.c
         include/doubly_linked_list.h
+        src/leetcode/21_merge_two_sorted_lists/solution.c
 )
