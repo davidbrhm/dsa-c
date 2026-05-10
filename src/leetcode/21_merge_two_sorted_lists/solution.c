@@ -3,11 +3,7 @@
 //
 
 #include <stddef.h>
-
-struct ListNode {
-    int val;
-    struct ListNode *next;
-};
+#include "../../../include/list_node.h"
 
 struct ListNode *mergeTwoLists(struct ListNode *list1, struct ListNode *list2) {
     if (list1 == NULL) return list2;
