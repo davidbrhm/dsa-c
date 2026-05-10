@@ -32,4 +32,5 @@ add_executable(dsa-c src/main.c
         src/leetcode/206_reverse_linked_list/solution.c
         src/leetcode/234_palindrome_linked_list/solution.c
         include/list_node.h
+        src/leetcode/1290_convert_binary_number_in_a_linked_list_to_integer/solution.c
 )
