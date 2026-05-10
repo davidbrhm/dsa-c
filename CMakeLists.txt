@@ -29,6 +29,7 @@ add_executable(dsa-c src/main.c
         src/data_structures/doubly_linked_list.c
         include/doubly_linked_list.h
         src/leetcode/21_merge_two_sorted_lists/solution.c
+        src/leetcode/206_reverse_linked_list/solution.c
         src/leetcode/234_palindrome_linked_list/solution.c
         include/list_node.h
 )
