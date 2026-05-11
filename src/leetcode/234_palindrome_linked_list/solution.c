@@ -5,7 +5,7 @@
 #include <stdbool.h>
 #include <stddef.h>
 
-#include "../../../include/list_node.h"
+#include "../../../include/_leetcode.h"
 
 bool isPalindrome(struct ListNode *head) {
     if (head == NULL || head->next == NULL) return true;

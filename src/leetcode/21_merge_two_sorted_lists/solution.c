@@ -3,7 +3,7 @@
 //
 
 #include <stddef.h>
-#include "../../../include/list_node.h"
+#include "../../../include/_leetcode.h"
 
 struct ListNode *mergeTwoLists(struct ListNode *list1, struct ListNode *list2) {
     if (list1 == NULL) return list2;

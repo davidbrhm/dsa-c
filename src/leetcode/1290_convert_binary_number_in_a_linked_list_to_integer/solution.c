@@ -4,7 +4,7 @@
 
 #include <stddef.h>
 
-#include "../../../include/list_node.h"
+#include "../../../include/_leetcode.h"
 
 int getDecimalValue(struct ListNode* head) {
     int result = 0;
