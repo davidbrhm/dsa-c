@@ -35,4 +35,6 @@ add_executable(dsa-c src/main.c
         src/leetcode/1290_convert_binary_number_in_a_linked_list_to_integer/solution.c
         src/leetcode/1797_design_authentication_manager/solution.c
         src/leetcode/1021_remove_outermost_parentheses/solution.c
+        src/data_structures/binary_tree.c
+        include/binary_tree.h
 )
