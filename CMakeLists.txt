@@ -37,4 +37,5 @@ add_executable(dsa-c src/main.c
         src/leetcode/1021_remove_outermost_parentheses/solution.c
         src/data_structures/binary_tree.c
         include/binary_tree.h
+        src/leetcode/404_sum_of_left_leaves/solution.c
 )
