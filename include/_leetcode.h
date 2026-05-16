@@ -14,4 +14,9 @@ struct TreeNode {
     struct TreeNode *left;
     struct TreeNode *right;
 };
+
+typedef struct CallStack {
+    int top;
+    struct TreeNode **nodes;
+} CallStack;
 #endif //DSA_C_LIST_NODE_H
