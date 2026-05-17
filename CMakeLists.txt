@@ -39,4 +39,6 @@ add_executable(dsa-c src/main.c
         include/binary_tree.h
         src/leetcode/404_sum_of_left_leaves/solution.c
         src/leetcode/binary_tree_traversals/solution.c
+        src/data_structures/binary_search_tree.c
+        include/binary_search_tree.h
 )
