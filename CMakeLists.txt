@@ -43,4 +43,6 @@ add_executable(dsa-c src/main.c
         include/binary_search_tree.h
         src/leetcode/108_convert_sorted_array_to_binary_search_tree/solution.c
         src/leetcode/700_search_in_a_binary_search_tree/solution.c
+        src/data_structures/hash_table.c
+        include/hash_table.h
 )

@@ -1,43 +1,29 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <stdio.h>
 
-#include "../include/binary_search_tree.h"
+#include "../include/hash_table.h"
 
 int main(void) {
-    BinarySearchTree *tree = create_bst();
+    HashTable *hash_table = create_hash_table();
 
-    bst_insert(tree, 50);
-    bst_insert(tree, 30);
-    bst_insert(tree, 70);
-    bst_insert(tree, 20);
-    bst_insert(tree, 40);
+    ht_insert(hash_table, 10, 100);
+    ht_insert(hash_table, 41, 200);
+    ht_insert(hash_table, 20, 300);
 
-    printf("Min: %d\n", bst_min_node(tree)->data);
-    printf("Max: %d\n", bst_max_node(tree)->data);
+    printf("Size: %d\n", ht_get_size(hash_table));
+    display_hash_table(hash_table);
 
-    printf("\nInorder:\n");
-    bst_inorder_traversal(tree->root);
-    printf("\n");
-
-    printf("\nPreorder:\n");
-    bst_preorder_traversal(tree->root);
-    printf("\n");
-
-    printf("\nPostorder:\n");
-    bst_postorder_traversal(tree->root);
-    printf("\n");
-
-    BSTNode *found = bst_search(tree, 30);
-    if (found) {
-        printf("\nFound: %d\n", found->data);
+    int index = ht_search(hash_table, 41);
+    if (index != -1) {
+        printf("\nFound index: %d\n", index);
+        ht_remove(hash_table, 41);
     }
 
-    bst_delete(tree, 30);
+    printf("\nSize: %d\n", ht_get_size(hash_table));
+    display_hash_table(hash_table);
 
-    printf("\nInorder: (30 removed)\n");
-    display_bst(tree);
-    printf("\n");
-
-    destroy_bst(tree);
-
+    destroy_hash_table(hash_table);
     return 0;
 }
