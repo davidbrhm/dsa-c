@@ -3,27 +3,32 @@
 #include <time.h>
 #include <stdio.h>
 
-#include "../include/hash_table.h"
+#include "../include/dynamic_hash_table.h"
 
 int main(void) {
-    HashTable *hash_table = create_hash_table();
+    DynamicHashTable *dht = create_dht();
 
-    ht_insert(hash_table, 10, 100);
-    ht_insert(hash_table, 41, 200);
-    ht_insert(hash_table, 20, 300);
+    dht_insert(dht, 10, 100);
+    dht_insert(dht, 20, 200);
+    dht_insert(dht, 30, 300);
 
-    printf("Size: %d\n", ht_get_size(hash_table));
-    display_hash_table(hash_table);
+    dht_insert(dht, 15, 150);
+    dht_insert(dht, 25, 250);
 
-    int index = ht_search(hash_table, 41);
-    if (index != -1) {
-        printf("\nFound index: %d\n", index);
-        ht_remove(hash_table, 41);
+    printf("Size: %d\n", dht_get_size(dht));
+    display_dht(dht);
+
+    int search_key = 20;
+    int found_data = dht_search(dht, search_key);
+
+    if (found_data != -1) {
+        printf("\nFound (Key: %d): Data: %d\n", search_key, found_data);
+        dht_remove(dht, search_key);
     }
 
-    printf("\nSize: %d\n", ht_get_size(hash_table));
-    display_hash_table(hash_table);
+    printf("\nSize: %d\n", dht_get_size(dht));
+    display_dht(dht);
 
-    destroy_hash_table(hash_table);
+    destroy_dht(dht);
     return 0;
 }
