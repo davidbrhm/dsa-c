@@ -45,4 +45,5 @@ add_executable(dsa-c src/main.c
         src/leetcode/700_search_in_a_binary_search_tree/solution.c
         src/data_structures/hash_table.c
         include/hash_table.h
+        src/leetcode/500_keyboard_row/solution.c
 )
