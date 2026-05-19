@@ -48,4 +48,5 @@ add_executable(dsa-c src/main.c
         src/leetcode/500_keyboard_row/solution.c
         src/data_structures/dynamic_hash_table.c
         include/dynamic_hash_table.h
+        src/leetcode/706_design_hashmap/solution.c
 )
