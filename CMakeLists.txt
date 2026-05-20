@@ -49,4 +49,6 @@ add_executable(dsa-c src/main.c
         src/data_structures/dynamic_hash_table.c
         include/dynamic_hash_table.h
         src/leetcode/706_design_hashmap/solution.c
+        src/algorithms/search.c
+        include/search.h
 )
