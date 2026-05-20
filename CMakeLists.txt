@@ -56,4 +56,5 @@ add_executable(dsa-c src/main.c
         include/sort.h
         src/leetcode/905_sort_array_by_parity/solution.c
         src/leetcode/1051_height_checker/solution.c
+        src/leetcode/912_sort_an_array/solution.c
 )
