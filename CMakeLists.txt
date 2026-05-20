@@ -54,4 +54,5 @@ add_executable(dsa-c src/main.c
         src/leetcode/88_merge_sorted_array/solution.c
         src/algorithms/sort.c
         include/sort.h
+        src/leetcode/905_sort_array_by_parity/solution.c
 )
