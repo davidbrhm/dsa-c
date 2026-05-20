@@ -51,4 +51,5 @@ add_executable(dsa-c src/main.c
         src/leetcode/706_design_hashmap/solution.c
         src/algorithms/search.c
         include/search.h
+        src/leetcode/88_merge_sorted_array/solution.c
 )
