@@ -1,34 +1,47 @@
-#include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
+#include <string.h>
 
-#include "../include/dynamic_hash_table.h"
+#include "../include/compression.h"
 
-int main(void) {
-    DynamicHashTable *dht = create_dht();
+int main() {
+    const char *tests[] = {"ABRACADABRA", "MISSISSIPPI"};
+    int num_tests = sizeof(tests) / sizeof(tests[0]);
 
-    dht_insert(dht, 10, 100);
-    dht_insert(dht, 20, 200);
-    dht_insert(dht, 30, 300);
+    for (int i = 0; i < num_tests; i++) {
+        const char *input = tests[i];
+        size_t input_len = strlen(input);
 
-    dht_insert(dht, 15, 150);
-    dht_insert(dht, 25, 250);
+        printf("In:  %s\n", input);
 
-    printf("Size: %d\n", dht_get_size(dht));
-    display_dht(dht);
+        HuffmanNode *root = NULL;
+        char *encoded_bits = huffman_encode((const unsigned char *) input, input_len, &root);
 
-    int search_key = 20;
-    int found_data = dht_search(dht, search_key);
+        if (!encoded_bits) {
+            printf("Encoding failed.\n\n");
+            continue;
+        }
 
-    if (found_data != -1) {
-        printf("\nFound (Key: %d): Data: %d\n", search_key, found_data);
-        dht_remove(dht, search_key);
+        size_t compressed_bits = strlen(encoded_bits);
+        size_t original_bits = input_len * 8;
+        float ratio = (float) compressed_bits / original_bits * 100.0f;
+
+        printf("Bits: %s\n", encoded_bits);
+        printf("Size: %zu bits -> %zu bits (%.2f%%)\n", original_bits, compressed_bits, ratio);
+
+        size_t decoded_len = 0;
+        unsigned char *decoded_text = huffman_decode(encoded_bits, root, &decoded_len);
+
+        if (decoded_text && decoded_len == input_len && memcmp(input, decoded_text, input_len) == 0) {
+            printf("Out: %.*s\n\n", (int) decoded_len, decoded_text);
+        } else {
+            printf("Decoding failed or mismatch.\n\n");
+        }
+
+        free(encoded_bits);
+        free(decoded_text);
+        huffman_tree_free(root);
     }
 
-    printf("\nSize: %d\n", dht_get_size(dht));
-    display_dht(dht);
-
-    destroy_dht(dht);
     return 0;
 }
