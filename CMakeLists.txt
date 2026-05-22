@@ -59,4 +59,5 @@ add_executable(dsa-c src/main.c
         src/leetcode/912_sort_an_array/solution.c
         src/algorithms/compression.c
         include/compression.h
+        src/leetcode/933_number_of_recent_calls/solution.c
 )
