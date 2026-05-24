@@ -60,4 +60,5 @@ add_executable(dsa-c src/main.c
         src/algorithms/compression.c
         include/compression.h
         src/leetcode/933_number_of_recent_calls/solution.c
+        src/leetcode/1436_destination_city/solution.c
 )
