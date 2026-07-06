@@ -2,8 +2,8 @@
 // Created by Ábrahám Dávid on 2026. 05. 11..
 //
 
-#include "../../include/binary_tree.h"
-#include "../../include/constants.h"
+#include "../../include/data_structures/binary_tree.h"
+#include "../../include/_utils/constants.h"
 
 #include <stdio.h>
 #include <stdlib.h>

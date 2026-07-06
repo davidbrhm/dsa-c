@@ -2,7 +2,7 @@
 // Created by Ábrahám Dávid on 2026. 05. 18..
 //
 
-#include "../../../include/_leetcode.h"
+#include "../../../include/leetcode/leetcode.h"
 
 struct TreeNode* searchBST(struct TreeNode* root, int val) {
     struct TreeNode *curr = root;

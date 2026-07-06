@@ -2,8 +2,8 @@
 // Created by Ábrahám Dávid on 2026. 05. 19..
 //
 
-#include "../../include/dynamic_hash_table.h"
-#include "../../include/constants.h"
+#include "../../include/data_structures/dynamic_hash_table.h"
+#include "../../include/_utils/constants.h"
 
 #include <stdio.h>
 #include <stdlib.h>

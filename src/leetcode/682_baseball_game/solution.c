@@ -4,7 +4,7 @@
 
 #include <stdlib.h>
 
-#include "../../../include/stack.h"
+#include "../../../include/data_structures/stack.h"
 
 
 int sumPoints(Stack *stack) {

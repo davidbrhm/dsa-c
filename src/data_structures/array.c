@@ -6,8 +6,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "../../include/constants.h"
-#include "../../include/array.h"
+#include "../../include/_utils/constants.h"
+#include "../../include/data_structures/array.h"
 
 
 IntArray *create_array(int capacity) {

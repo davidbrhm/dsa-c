@@ -2,8 +2,8 @@
 // Created by Ábrahám Dávid on 2026. 05. 06..
 //
 
-#include "../../include/doubly_linked_list.h"
-#include "../../include/constants.h"
+#include "../../include/data_structures/doubly_linked_list.h"
+#include "../../include/_utils/constants.h"
 
 #include <stdio.h>
 #include <stdlib.h>

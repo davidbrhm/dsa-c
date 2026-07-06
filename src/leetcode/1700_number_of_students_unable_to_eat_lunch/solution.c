@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "../../../include/circular_queue.h"
+#include "../../../include/data_structures/circular_queue.h"
 
 void init_cq(CircularQueue *cq, int *arr, int n) {
     cq->elements = malloc((n + 1) * sizeof(int));

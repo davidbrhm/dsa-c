@@ -2,7 +2,7 @@
 // Created by Ábrahám Dávid on 2026. 05. 02..
 //
 
-#include "../../include/constants.h"
+#include "../../include/_utils/constants.h"
 
 const char ERR_MSG_MEM_ALLOC[] = "Error: Memory allocation failed!\n";
 

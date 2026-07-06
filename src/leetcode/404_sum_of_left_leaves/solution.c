@@ -2,7 +2,7 @@
 // Created by Ábrahám Dávid on 2026. 05. 11..
 //
 
-#include "../../../include/_leetcode.h"
+#include "../../../include/leetcode/leetcode.h"
 #include <stddef.h>
 
 int sumOfLeftLeaves(struct TreeNode *root) {

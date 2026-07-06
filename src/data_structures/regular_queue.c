@@ -2,11 +2,11 @@
 // Created by Ábrahám Dávid on 2026. 05. 02..
 //
 
-#include "../../include/regular_queue.h"
+#include "../../include/data_structures/regular_queue.h"
 
 #include <limits.h>
 
-#include "../../include/constants.h"
+#include "../../include/_utils/constants.h"
 
 #include <stdio.h>
 #include <stdlib.h>

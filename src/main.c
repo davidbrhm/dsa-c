@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "../include/compression.h"
+#include "../include/algorithms/compression.h"
 
 int main() {
     const char *tests[] = {"ABRACADABRA", "MISSISSIPPI"};

@@ -6,8 +6,8 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "../../include/matrix.h"
-#include "../../include/constants.h"
+#include "../../include/data_structures/matrix.h"
+#include "../../include/_utils/constants.h"
 
 
 #define CONSOLE_KEYWORD "CON"

@@ -6,7 +6,7 @@
 #include <string.h>
 #include <stdbool.h>
 
-#include "../../../include/stack.h"
+#include "../../../include/data_structures/stack.h"
 
 
 int convert(char ch) {

@@ -7,8 +7,8 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-#include "../../include/compression.h"
-#include "../../include/constants.h"
+#include "../../include/algorithms/compression.h"
+#include "../../include/_utils/constants.h"
 
 
 typedef struct MinHeap {

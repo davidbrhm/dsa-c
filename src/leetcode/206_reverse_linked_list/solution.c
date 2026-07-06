@@ -4,7 +4,7 @@
 
 #include <stddef.h>
 
-#include "../../../include/_leetcode.h"
+#include "../../../include/leetcode/leetcode.h"
 
 struct ListNode* reverseList(struct ListNode* head) {
     struct ListNode *prev = NULL;

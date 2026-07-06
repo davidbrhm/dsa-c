@@ -5,7 +5,7 @@
 #include <stddef.h>
 #include <stdlib.h>
 
-#include "../../../include/_leetcode.h"
+#include "../../../include/leetcode/leetcode.h"
 
 int *inorderTraversal(struct TreeNode *root, int *returnSize) {
     CallStack *call_stack = (CallStack *) calloc(1, sizeof(CallStack));

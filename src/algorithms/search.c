@@ -2,7 +2,7 @@
 // Created by Ábrahám Dávid on 2026. 05. 20..
 //
 
-#include "../../include/search.h"
+#include "../../include/algorithms/search.h"
 
 int linear_search(const int *arr, int size, int target) {
     if (!arr || size <= 0) return -1;

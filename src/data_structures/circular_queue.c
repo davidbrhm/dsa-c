@@ -2,8 +2,8 @@
 // Created by Ábrahám Dávid on 2026. 05. 04..
 //
 
-#include "../../include/constants.h"
-#include "../../include/circular_queue.h"
+#include "../../include/_utils/constants.h"
+#include "../../include/data_structures/circular_queue.h"
 
 #include <limits.h>
 #include <stdio.h>

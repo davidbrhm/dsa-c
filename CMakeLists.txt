@@ -4,9 +4,9 @@ project(dsa-c C)
 set(CMAKE_C_STANDARD 11)
 
 add_executable(dsa-c src/main.c
-        include/constants.h
+        include/_utils/constants.h
         src/data_structures/stack.c
-        include/stack.h
+        include/data_structures/stack.h
         src/leetcode/020_valid_parentheses/solution.c
         src/leetcode/1952_three_divisors/solution.c
         src/leetcode/169_majority_element/solution.c
@@ -14,51 +14,51 @@ add_executable(dsa-c src/main.c
         src/leetcode/217_contains_duplicate/solution.c
         src/leetcode/682_baseball_game/solution.c
         src/data_structures/matrix.c
-        include/matrix.h
+        include/data_structures/matrix.h
         src/_utils/constants.c
         src/data_structures/array.c
-        include/array.h
+        include/data_structures/array.h
         src/data_structures/regular_queue.c
-        include/regular_queue.h
+        include/data_structures/regular_queue.h
         src/leetcode/1700_number_of_students_unable_to_eat_lunch/solution.c
         src/data_structures/circular_queue.c
-        include/circular_queue.h
+        include/data_structures/circular_queue.h
         src/leetcode/622_design_circular_queue/solution.c
         src/data_structures/singly_linked_list.c
-        include/singly_linked_list.h
+        include/data_structures/singly_linked_list.h
         src/data_structures/doubly_linked_list.c
-        include/doubly_linked_list.h
+        include/data_structures/doubly_linked_list.h
         src/leetcode/21_merge_two_sorted_lists/solution.c
         src/leetcode/206_reverse_linked_list/solution.c
         src/leetcode/234_palindrome_linked_list/solution.c
-        include/_leetcode.h
+        include/leetcode/leetcode.h
         src/leetcode/1290_convert_binary_number_in_a_linked_list_to_integer/solution.c
         src/leetcode/1797_design_authentication_manager/solution.c
         src/leetcode/1021_remove_outermost_parentheses/solution.c
         src/data_structures/binary_tree.c
-        include/binary_tree.h
+        include/data_structures/binary_tree.h
         src/leetcode/404_sum_of_left_leaves/solution.c
         src/leetcode/binary_tree_traversals/solution.c
         src/data_structures/binary_search_tree.c
-        include/binary_search_tree.h
+        include/data_structures/binary_search_tree.h
         src/leetcode/108_convert_sorted_array_to_binary_search_tree/solution.c
         src/leetcode/700_search_in_a_binary_search_tree/solution.c
         src/data_structures/hash_table.c
-        include/hash_table.h
+        include/data_structures/hash_table.h
         src/leetcode/500_keyboard_row/solution.c
         src/data_structures/dynamic_hash_table.c
-        include/dynamic_hash_table.h
+        include/data_structures/dynamic_hash_table.h
         src/leetcode/706_design_hashmap/solution.c
         src/algorithms/search.c
-        include/search.h
+        include/algorithms/search.h
         src/leetcode/88_merge_sorted_array/solution.c
         src/algorithms/sort.c
-        include/sort.h
+        include/algorithms/sort.h
         src/leetcode/905_sort_array_by_parity/solution.c
         src/leetcode/1051_height_checker/solution.c
         src/leetcode/912_sort_an_array/solution.c
         src/algorithms/compression.c
-        include/compression.h
+        include/algorithms/compression.h
         src/leetcode/933_number_of_recent_calls/solution.c
         src/leetcode/1436_destination_city/solution.c
 )

@@ -3,8 +3,8 @@
 //
 
 
-#include "../../../include/_leetcode.h"
-#include "../../../include/hash_table.h"
+#include "../../../include/leetcode/leetcode.h"
+#include "../../../include/data_structures/hash_table.h"
 
 /*
 typedef struct HashItem {

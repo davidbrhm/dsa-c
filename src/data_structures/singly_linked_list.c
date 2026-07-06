@@ -2,12 +2,12 @@
 // Created by Ábrahám Dávid on 2026. 05. 06..
 //
 
-#include "../../include/singly_linked_list.h"
+#include "../../include/data_structures/singly_linked_list.h"
 
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "../../include/constants.h"
+#include "../../include/_utils/constants.h"
 
 SList *create_slist() {
     SList *list = (SList *) calloc(1, sizeof(SList));

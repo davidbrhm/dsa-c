@@ -2,7 +2,7 @@
 // Created by Ábrahám Dávid on 2026. 05. 20..
 //
 
-#include "../../include/sort.h"
+#include "../../include/algorithms/sort.h"
 
 #include <stdlib.h>
 

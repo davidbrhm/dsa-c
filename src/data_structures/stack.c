@@ -2,8 +2,8 @@
 // Created by Ábrahám Dávid on 2026. 04. 28..
 //
 
-#include "../../include/stack.h"
-#include "../../include/constants.h"
+#include "../../include/data_structures/stack.h"
+#include "../../include/_utils/constants.h"
 
 #include <stdio.h>
 #include <stdlib.h>
